@@ -1,0 +1,25 @@
+buildscript{
+    dependencies{
+        classpath "com.github.Anuken.Arc:arc-core:$arcVersion"
+        classpath "com.github.Anuken:jabel:$jabelVersion"
+    }
+
+    repositories{
+        mavenCentral()
+        maven{ url 'https://www.jitpack.io/' }
+    }
+}
+
+allprojects{
+    apply plugin: 'java'
+
+    sourceSets.main{
+        java.srcDirs = ['src/']
+        resources.srcDirs = ['assets/']
+    }
+
+    repositories{
+        mavenCentral()
+        maven{ url 'https://www.jitpack.io/' }
+    }
+}
